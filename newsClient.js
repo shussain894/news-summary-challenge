@@ -1,7 +1,9 @@
+const apiKey = require('./apiKey');
+
 class NewsClient {
 
   loadHeadlines(callback) {
-    fetch('https://content.guardianapis.com/search?api-key=fb6641b9-7470-4efe-87ff-d95f13c3c0ff')
+    fetch(`https://content.guardianapis.com/search?api-key={apiKey}`)
     .then((response) => response.json())
     .then((data) => callback(data))
   }

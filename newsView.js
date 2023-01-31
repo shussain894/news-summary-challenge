@@ -27,7 +27,7 @@ class NewsViews {
   };
 
   displayHeadlinesFromAPI() {
-    const headllines = this.client.loadHeadlines(headline => {
+    const headlines = this.client.loadHeadlines(headline => {
       const response = headline.response.results
       const webTitle_url = element => {
         const news_object = {}
